@@ -25,8 +25,16 @@ class TestRemoveDuplicatesAndSort(unittest.TestCase):
         sorted_numbers = remove_duplicates_and_sort(input_numbers)
         
         self.assertEqual(sorted_numbers, expected_output)
+        
+    #Test coundary condition
+    def test_boundary_condition(self):
+        input_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 100]
+        expected_output = [100, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+        
+        sorted_numbers = remove_duplicates_and_sort(input_numbers)
+        
+        self.assertEqual(sorted_numbers, expected_output)
 
-    #More test cases can be added...
     
 if __name__ == '__main__':
     unittest.main()
